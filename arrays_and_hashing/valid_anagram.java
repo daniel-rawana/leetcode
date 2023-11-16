@@ -4,21 +4,16 @@ import java.util.*;
 
 class Solution {
     public static boolean isAnagram(String s, String t) {
-        if (t.length() < s.length()) {
-            return(false);
+        char[] a = s.toCharArray();
+        char[] b = t.toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(b);
+        System.out.println(a);
+        System.out.println(b);
+        if (Arrays.equals(a,b)) {
+            return(true);
         }
-        ArrayList<Character> l = new ArrayList<>();
-        for (int i = 0; i < s.length(); i++) {
-            l.add(s.charAt(i));
-        }
-        for (int i = 0; i < t.length(); i++) {
-            if (l.contains(t.charAt(i))) {
-                l.remove((Character)t.charAt(i));
-            }
-            else
-                return(false);
-        }
-        return(true);
+        return(false);
     }
         public static void main(String[] args){
         String s = "anagram";
