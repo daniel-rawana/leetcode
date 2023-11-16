@@ -5,11 +5,12 @@ import java.util.HashSet;
 
 public class contains_duplicate {
     public boolean containsDuplicate(int[] nums) {
-        HashSet<Integer> h = new HashSet<>();
+        HashMap<Integer, Integer> h = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            if (!h.add(nums[i])) {
+            if (h.get(nums[i]) == null) {
                 return(true);
             }
+            h.put(nums[i], nums[i]);
         }
         return(false);
     }
