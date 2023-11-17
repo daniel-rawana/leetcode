@@ -1,7 +1,6 @@
 package arrays_and_hashing;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class contains_duplicate {
     public boolean containsDuplicate(int[] nums) {
